@@ -97,7 +97,6 @@ class MainApp(MDApp):
 
     def load_video(self, *args):
         success, frame= self.capture.read()
-        #hand detection code
         frame= self.detector.findHands(frame)
         self.lmList= self.detector.findPosition(frame, draw=False)
         if len(self.lmList)!=0:
@@ -130,11 +129,7 @@ class MainApp(MDApp):
         texture = Texture.create(size=(frame.shape[1], frame.shape[0]), colorfmt='bgr')
         texture.blit_buffer(buffer, colorfmt='bgr', bufferfmt='ubyte')
         self.image.texture= texture
-            
-    
-
-
-            
+                       
         
 if __name__ == "__main__":
     MainApp().run()
