@@ -38,8 +38,8 @@ Screen:
                 Image:
 
 
-        MDNavigationDrawer:
-            id: nav_drawer
+        # MDNavigationDrawer:
+        #     id: nav_drawer
 
 """
 
@@ -119,7 +119,6 @@ class MainApp(MDApp):
                 
 
         
-        cv2.putText(frame, f'FPS: {int(self.fps)}', (48, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 3)
         cv2.putText(frame, f'CV Volume Control', (48, 90), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 0, 0), 3)
 
         
