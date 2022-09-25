@@ -116,12 +116,8 @@ class MainApp(MDApp):
         cv2.rectangle(frame, (50, 150), (85, 400), (0, 0, 0), 3)
         cv2.rectangle(frame, (50, int(self.volBar)), (85, 400), (0, 0, 0), cv2.FILLED)
         cv2.putText(frame, f'{int(self.volPerc)}%', (48, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 3)
-                
-
-        
+               
         cv2.putText(frame, f'CV Volume Control', (48, 90), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 0, 0), 3)
-
-        
 
         self.image_frame= frame
         buffer =cv2.flip(frame, 0).tostring()
